@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Dental Queen (Ixtapaluca) | Especialistas en Salud Bucal</title>
+  <meta name="description" content="Somos el mejor equipo de Especialistas en Salud bucal en Ixtapaluca. Contamos con todas las especialidades Odontológicas y más de 10 años de experiencia. ¡La mejor atención al alcance de todos!" />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter para máxima legibilidad médica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clinical: {
+              DEFAULT: '#0284C7',
+              hover: '#0369A1',
+              light: '#E0F2FE',
+              subtle: '#F0F9FF'
+            },
+            gold: {
+              DEFAULT: '#D97706',
+              light: '#FEF3C7',
+              border: '#FDE68A'
+            },
+            ice: '#F8FAFC',
+            ink: '#0F172A'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FFFFFF;
+      color: #0F172A;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#0F172A] selection:bg-[#E0F2FE] selection:text-[#0284C7]">
+
+  <!-- 1. NAVBAR FIJA BLANCA -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Marca / Logo -->
+        <a href="#inicio" class="flex items-center gap-3.5 group">
+          <div class="w-12 h-12 rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm flex items-center justify-center shrink-0">
+            <img src="img/logo-clinica-dental-queen.png" alt="Logo Clínica Dental Queen" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <span class="block font-heading font-bold text-base sm:text-lg text-[#0F172A] leading-tight group-hover:text-[#0284C7] transition-colors">
+              Clínica Dental Queen <span class="text-[#0284C7] font-semibold">(Ixtapaluca)</span>
+            </span>
+            <span class="flex items-center gap-1.5 text-xs text-slate-600 font-medium mt-0.5">
+              <span class="text-[#D97706]">★ 4.8</span>
+              <span>•</span>
+              <span>Especialistas en Salud Bucal</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Enlaces de Navegación (Desktop) -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700" aria-label="Navegación principal">
+          <a href="#inicio" class="hover:text-[#0284C7] transition-colors">Inicio</a>
+          <a href="#especialidades" class="hover:text-[#0284C7] transition-colors">Especialidades</a>
+          <a href="#galeria" class="hover:text-[#0284C7] transition-colors">Galería</a>
+          <a href="#opiniones" class="hover:text-[#0284C7] transition-colors">Opiniones</a>
+          <a href="#ubicacion" class="hover:text-[#0284C7] transition-colors">Ubicación</a>
+        </nav>
+
+        <!-- Botón Azul de Acción -->
+        <div class="hidden sm:flex items-center">
+          <a
+            href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-sm transition-all duration-200 hover:-translate-y-1"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.122 1.529 5.854l-1.529 5.581 5.716-1.499c1.693.923 3.631 1.448 5.695 1.448 6.627 0 12-5.373 12-12 0-6.627-5.373-12-11.411-11.384z"/>
+            </svg>
+            <span>Agendar por WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Botón Menú Móvil -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="md:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-slate-700 hover:text-[#0284C7] hover:bg-slate-100 border border-slate-200 transition-colors"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path id="menu-icon-bars" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil (100% Blanco) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-2 shadow-md">
+      <a href="#inicio" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-800 hover:bg-[#F8FAFC] hover:text-[#0284C7]">Inicio</a>
+      <a href="#especialidades" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-800 hover:bg-[#F8FAFC] hover:text-[#0284C7]">Especialidades</a>
+      <a href="#galeria" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-800 hover:bg-[#F8FAFC] hover:text-[#0284C7]">Galería</a>
+      <a href="#opiniones" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-800 hover:bg-[#F8FAFC] hover:text-[#0284C7]">Opiniones</a>
+      <a href="#ubicacion" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-800 hover:bg-[#F8FAFC] hover:text-[#0284C7]">Ubicación</a>
+      <div class="pt-2">
+        <a
+          href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full inline-flex items-center justify-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm px-5 py-3 rounded-xl shadow-sm"
+        >
+          <span>Agendar por WhatsApp (55 1716 8619)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION LUMINOSA (A 2 COLUMNAS) - Fondo Blanco Puro #FFFFFF -->
+    <section id="inicio" class="bg-white py-12 sm:py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Columna Izquierda -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Badge Oficial -->
+            <div class="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-full bg-[#FEF3C7]/60 border border-[#FDE68A] text-xs sm:text-sm font-semibold text-[#0F172A]">
+              <span class="text-[#D97706]">⭐ 4.8 Estrellas en Google Maps (166 opiniones)</span>
+              <span class="text-slate-400">•</span>
+              <span class="text-[#0284C7]">+10 Años de Experiencia</span>
+            </div>
+
+            <!-- Título Principal Limpio -->
+            <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.15]">
+              El Mejor Equipo de Especialistas en Salud Bucal en <span class="text-[#0284C7]">Ixtapaluca</span>
+            </h1>
+
+            <!-- Descripción Oficial del Negocio -->
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+              “Somos el mejor equipo de Especialistas en Salud bucal. Contamos con todas las especialidades Odontológicas, más de 10 años de experiencia nos respaldan. ¡La mejor atención al alcance de todos!”
+            </p>
+
+            <!-- Datos Rápidos de Ubicación y Horario -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-sm text-slate-600 pt-1">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#0284C7] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Av. Cuauhtémoc Mz. 037, Col. Santa Bárbara, Ixtapaluca</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#0284C7] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span class="font-semibold text-[#0F172A]">55 1716 8619</span>
+              </div>
+            </div>
+
+            <!-- Dos Botones Claros -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+              <a
+                href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2.5 bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-base px-7 py-3.5 rounded-xl shadow-md transition-all duration-200 hover:-translate-y-1"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.122 1.529 5.854l-1.529 5.581 5.716-1.499c1.693.923 3.631 1.448 5.695 1.448 6.627 0 12-5.373 12-12 0-6.627-5.373-12-11.411-11.384z"/>
+                </svg>
+                <span>Agendar Cita por WhatsApp (55 1716 8619)</span>
+              </a>
+
+              <a
+                href="#ubicacion"
+                class="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#F8FAFC] text-[#0F172A] border border-slate-200 font-semibold text-base px-6 py-3.5 rounded-xl shadow-sm transition-all duration-200 hover:-translate-y-1"
+              >
+                <svg class="w-5 h-5 text-[#0284C7]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Ver Ubicación</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Fotografía Principal de la Clínica (Nítida y sin filtros oscuros) -->
+          <div class="lg:col-span-5">
+            <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-md">
+              <img
+                src="img/consultorio-dental.jpg"
+                alt="Consultorio equipado de Clínica Dental Queen en Ixtapaluca"
+                class="w-full h-[380px] sm:h-[440px] object-cover rounded-2xl"
+              />
+              <div class="pt-3 px-2 pb-1 flex items-center justify-between text-xs sm:text-sm text-slate-600">
+                <span class="font-medium text-[#0F172A]">Instalaciones reales en Col. Santa Bárbara</span>
+                <span class="inline-flex items-center gap-1 text-[#0284C7] font-semibold">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Verificado
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CINTA DE DATOS REALES (4 TARJETAS BLANCAS SIMPLES) - Fondo Gris Hielo #F8FAFC -->
+    <section class="bg-[#F8FAFC] py-10 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <!-- Tarjeta 1 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading font-bold text-base text-[#0F172A]">+10 Años de Experiencia</h2>
+              <p class="text-xs text-slate-600 mt-1">Respaldo profesional en salud bucal integral.</p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-[#FEF3C7] text-[#D97706] flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading font-bold text-base text-[#0F172A]">4.8 ⭐ (166 Opiniones en Google)</h2>
+              <p class="text-xs text-slate-600 mt-1">Calificación real verificada por nuestros pacientes.</p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading font-bold text-base text-[#0F172A]">Todas las Especialidades y Odontopediatría</h2>
+              <p class="text-xs text-slate-600 mt-1">Atención para niños, jóvenes y adultos.</p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading font-bold text-base text-[#0F172A]">Aceptamos Tarjetas Crédito/Débito y NFC</h2>
+              <p class="text-xs text-slate-600 mt-1">Pagos con tarjeta, sin contacto y efectivo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CATÁLOGO DE ESPECIALIDADES - Fondo Blanco Puro #FFFFFF -->
+    <section id="especialidades" class="bg-white py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Encabezado de Sección -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#0284C7] bg-[#E0F2FE] px-3.5 py-1.5 rounded-full mb-3">
+            Especialidades Odontológicas
+          </span>
+          <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A]">
+            Todas las Especialidades para el Cuidado de tu Sonrisa
+          </h2>
+          <p class="text-slate-600 mt-3 text-base">
+            Contamos con especialistas calificados y más de 10 años de experiencia brindando tratamientos odontológicos seguros y al alcance de todos.
+          </p>
+        </div>
+
+        <!-- Cuadrícula Ordenada de 6 Tarjetas Blancas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Especialidad 1: Odontología General y Preventiva -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-bold text-[#0F172A] mb-2">
+                Odontología General y Preventiva
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Valoración integral, diagnóstico y limpiezas dentales profesionales.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm font-semibold text-[#0284C7] hover:text-[#0369A1]"
+            >
+              Agendar valoración →
+            </a>
+          </div>
+
+          <!-- Especialidad 2: Atención Pediátrica (Odontopediatría) -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-bold text-[#0F172A] mb-2">
+                Atención Pediátrica (Odontopediatría)
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Cuidado dental especializado, paciente y amigable para niños.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm font-semibold text-[#0284C7] hover:text-[#0369A1]"
+            >
+              Agendar valoración →
+            </a>
+          </div>
+
+          <!-- Especialidad 3: Ortodoncia -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-bold text-[#0F172A] mb-2">
+                Ortodoncia
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Tratamientos para alinear tu sonrisa y mejorar la mordida.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm font-semibold text-[#0284C7] hover:text-[#0369A1]"
+            >
+              Agendar valoración →
+            </a>
+          </div>
+
+          <!-- Especialidad 4: Endodoncia -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-bold text-[#0F172A] mb-2">
+                Endodoncia
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Tratamientos especializados de conductos para salvar tus piezas dentales y eliminar el dolor.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm font-semibold text-[#0284C7] hover:text-[#0369A1]"
+            >
+              Agendar valoración →
+            </a>
+          </div>
+
+          <!-- Especialidad 5: Estética y Rehabilitación Dental -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-bold text-[#0F172A] mb-2">
+                Estética y Rehabilitación Dental
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Resinas, coronas y restauraciones estéticas de alta duración.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm font-semibold text-[#0284C7] hover:text-[#0369A1]"
+            >
+              Agendar valoración →
+            </a>
+          </div>
+
+          <!-- Especialidad 6: Cirugía Bucal y Extracciones -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-bold text-[#0F172A] mb-2">
+                Cirugía Bucal y Extracciones
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Procedimientos seguros realizados por especialistas con más de 10 años de experiencia.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm font-semibold text-[#0284C7] hover:text-[#0369A1]"
+            >
+              Agendar valoración →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GALERÍA DE LA CLÍNICA - Fondo Gris Hielo #F8FAFC -->
+    <section id="galeria" class="bg-[#F8FAFC] py-16 sm:py-20 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Encabezado de Galería -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#0284C7] bg-[#E0F2FE] px-3.5 py-1.5 rounded-full mb-3">
+            Conoce Nuestras Instalaciones
+          </span>
+          <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A]">
+            Galería Real de Clínica Dental Queen
+          </h2>
+          <p class="text-slate-600 mt-3 text-base">
+            Espacios limpios, cómodos y equipados en Av. Cuauhtémoc Manzana 037, Col. Santa Bárbara, Ixtapaluca.
+          </p>
+        </div>
+
+        <!-- Cuadrícula Limpia de Fotos Reales (Sin filtros oscuros encima) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Foto 1: Consultorio Dental -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1">
+            <img
+              src="img/consultorio-dental.jpg"
+              alt="Área clínica y unidad dental de Clínica Dental Queen"
+              class="w-full h-72 object-cover rounded-xl"
+              loading="lazy"
+            />
+            <div class="pt-3 px-2 pb-1">
+              <h3 class="font-heading font-bold text-sm text-[#0F172A]">Consultorio Dental Equipado</h3>
+              <p class="text-xs text-slate-600 mt-0.5">Unidad odontológica cómoda, higiénica y moderna.</p>
+            </div>
+          </div>
+
+          <!-- Foto 2: Recepción Principal -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1">
+            <img
+              src="img/recepcion-principal.jpg"
+              alt="Recepción principal de Clínica Dental Queen en Ixtapaluca"
+              class="w-full h-72 object-cover rounded-xl"
+              loading="lazy"
+            />
+            <div class="pt-3 px-2 pb-1">
+              <h3 class="font-heading font-bold text-sm text-[#0F172A]">Recepción y Atención al Paciente</h3>
+              <p class="text-xs text-slate-600 mt-0.5">Aceptamos pagos con tarjeta Visa, débito, crédito y NFC.</p>
+            </div>
+          </div>
+
+          <!-- Foto 3: Sala de Espera y Vista Interior -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1">
+            <img
+              src="img/sala-espera-recepcion.jpg"
+              alt="Sala de espera y mostrador de Clínica Dental Queen"
+              class="w-full h-72 object-cover rounded-xl"
+              loading="lazy"
+            />
+            <div class="pt-3 px-2 pb-1">
+              <h3 class="font-heading font-bold text-sm text-[#0F172A]">Área de Recepción y Espera</h3>
+              <p class="text-xs text-slate-600 mt-0.5">Instalaciones luminosas con sanitarios disponibles.</p>
+            </div>
+          </div>
+
+          <!-- Foto 4: Detalle de Recepción y Productos de Higiene -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 md:col-span-1 lg:col-span-2">
+            <img
+              src="img/recepcion-detalle.jpg"
+              alt="Detalle del mostrador de recepción en Clínica Dental Queen"
+              class="w-full h-72 object-cover rounded-xl"
+              loading="lazy"
+            />
+            <div class="pt-3 px-2 pb-1">
+              <h3 class="font-heading font-bold text-sm text-[#0F172A]">Ambiente Cálido y Familiar</h3>
+              <p class="text-xs text-slate-600 mt-0.5">Atención cercana y productos especializados para el cuidado bucal diario.</p>
+            </div>
+          </div>
+
+          <!-- Foto 5: Identidad Oficial Clínica Dental Queen -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1">
+            <img
+              src="img/logo-clinica-dental-queen.png"
+              alt="Logotipo en muro de Clínica Dental Queen"
+              class="w-full h-72 object-cover rounded-xl"
+              loading="lazy"
+            />
+            <div class="pt-3 px-2 pb-1">
+              <h3 class="font-heading font-bold text-sm text-[#0F172A]">Clínica Dental Queen (Ixtapaluca)</h3>
+              <p class="text-xs text-slate-600 mt-0.5">Más de 10 años de experiencia respaldan cada tratamiento.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SECCIÓN DE OPINIONES DE GOOGLE MAPS - Fondo Blanco Puro #FFFFFF -->
+    <section id="opiniones" class="bg-white py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Resumen Visual de Calificación 4.8 con 166 reseñas -->
+        <div class="bg-[#F8FAFC] border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm mb-10">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+              <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#D97706] bg-[#FEF3C7] border border-[#FDE68A] px-3 py-1 rounded-full mb-2">
+                Calificación Verificada en Google Maps
+              </span>
+              <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#0F172A]">
+                Lo que opinan nuestros pacientes en Ixtapaluca
+              </h2>
+              <p class="text-slate-600 text-sm sm:text-base mt-1">
+                Basado en 166 opiniones reales registradas en nuestra ficha oficial de Google Maps.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 bg-white border border-slate-200 px-6 py-4 rounded-2xl shadow-sm shrink-0">
+              <div class="text-center">
+                <span class="block font-heading text-4xl font-extrabold text-[#0F172A]">4.8</span>
+                <span class="text-xs text-slate-500 font-medium">de 5 estrellas</span>
+              </div>
+              <div class="h-10 w-px bg-slate-200"></div>
+              <div>
+                <div class="flex items-center gap-1 text-[#D97706] text-lg" aria-label="4.8 de 5 estrellas">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="text-xs font-semibold text-slate-700 mt-1">166 opiniones reales</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Tarjetas Limpias Destacando Excelente Trato, Precios al Alcance de Todos y Profesionalismo -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          
+          <!-- Tarjeta de Opinión 1: Excelente Trato -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#D97706] text-base">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="text-xs font-semibold text-[#0284C7] bg-[#E0F2FE] px-2.5 py-1 rounded-md">
+                  Excelente Trato
+                </span>
+              </div>
+              <h3 class="font-heading font-bold text-base text-[#0F172A] mb-2">
+                Atención Cálida, Paciente y Humana
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Los pacientes destacan la amabilidad desde la recepción y la paciencia de los especialistas al explicar cada procedimiento tanto para adultos como en atención pediátrica.
+              </p>
+            </div>
+            <div class="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Aspecto destacado en Google Maps</span>
+              <span class="text-[#D97706] font-semibold">Verificado ✓</span>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Opinión 2: Precios al Alcance de Todos -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#D97706] text-base">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="text-xs font-semibold text-[#0284C7] bg-[#E0F2FE] px-2.5 py-1 rounded-md">
+                  Accesibilidad
+                </span>
+              </div>
+              <h3 class="font-heading font-bold text-base text-[#0F172A] mb-2">
+                ¡La Mejor Atención al Alcance de Todos!
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Fieles a nuestro compromiso oficial, ofrecemos tratamientos odontológicos de alta calidad con precios justos y facilidad de pago con tarjetas de crédito, débito y pagos móviles NFC.
+              </p>
+            </div>
+            <div class="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Compromiso Clínica Dental Queen</span>
+              <span class="text-[#D97706] font-semibold">Verificado ✓</span>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Opinión 3: Profesionalismo y +10 Años de Experiencia -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#D97706] text-base">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="text-xs font-semibold text-[#0284C7] bg-[#E0F2FE] px-2.5 py-1 rounded-md">
+                  Profesionalismo
+                </span>
+              </div>
+              <h3 class="font-heading font-bold text-base text-[#0F172A] mb-2">
+                Especialistas con +10 Años de Experiencia
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Respaldados por más de una década de trayectoria en todas las especialidades odontológicas, con instalaciones impecables y diagnósticos confiables.
+              </p>
+            </div>
+            <div class="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Trayectoria comprobada</span>
+              <span class="text-[#D97706] font-semibold">Verificado ✓</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botón Directo al Link Exacto de Google Maps -->
+        <div class="text-center">
+          <a
+            href="https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Queen+(Ixtapaluca)/@19.3116859,-98.9013251,18z/data=!4m6!3m5!1s0x85ce1fc8b31defdd:0xdca9be4c71c07c92!8m2!3d19.3116859!4d-98.9013251!16s%2Fg%2F11v15491c0"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-[#F8FAFC] text-[#0F172A] border border-slate-200 font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-sm transition-all duration-200 hover:-translate-y-1"
+          >
+            <svg class="w-5 h-5 text-[#0284C7]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            <span>Leer las 166 opiniones reales en Google Maps</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. UBICACIÓN, PAGOS Y HORARIOS - Fondo Gris Hielo #F8FAFC -->
+    <section id="ubicacion" class="bg-[#F8FAFC] py-16 sm:py-20 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Encabezado -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#0284C7] bg-[#E0F2FE] px-3.5 py-1.5 rounded-full mb-3">
+            Visítanos en Ixtapaluca
+          </span>
+          <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A]">
+            Ubicación, Horarios y Métodos de Pago
+          </h2>
+          <p class="text-slate-600 mt-3 text-base">
+            Se recomienda agendar cita previa para brindarte una atención puntual y personalizada.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Columna Izquierda: Información de Contacto, Horarios y Pagos -->
+          <div class="lg:col-span-6 space-y-6">
+            
+            <!-- Tarjeta Dirección y Teléfono -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="w-11 h-11 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-base text-[#0F172A]">Dirección Oficial</h3>
+                  <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                    Av. Cuauhtémoc Manzana 037, Col. Santa Bárbara, CP 56577, Ixtapaluca, Estado de México.
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Queen+(Ixtapaluca)/@19.3116859,-98.9013251,18z/data=!4m6!3m5!1s0x85ce1fc8b31defdd:0xdca9be4c71c07c92!8m2!3d19.3116859!4d-98.9013251!16s%2Fg%2F11v15491c0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-xs font-semibold text-[#0284C7] hover:text-[#0369A1] mt-2"
+                  >
+                    <span>Abrir ruta en Google Maps →</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="border-t border-slate-100 pt-5 flex items-start gap-4">
+                <div class="w-11 h-11 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-heading font-bold text-base text-[#0F172A]">Teléfono y WhatsApp Oficial</h3>
+                  <p class="text-slate-600 text-sm mt-1">
+                    Atención directa y agenda de citas: <strong class="text-[#0F172A]">55 1716 8619</strong>
+                  </p>
+                  <div class="flex flex-wrap gap-3 mt-3">
+                    <a
+                      href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-transform duration-200 hover:-translate-y-1"
+                    >
+                      <span>Enviar WhatsApp</span>
+                    </a>
+                    <a
+                      href="tel:5517168619"
+                      class="inline-flex items-center gap-2 bg-white hover:bg-[#F8FAFC] text-[#0F172A] border border-slate-200 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-transform duration-200 hover:-translate-y-1"
+                    >
+                      <span>Llamar al 55 1716 8619</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta Tabla Clara de Horarios Oficiales -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-base text-[#0F172A]">Horarios Oficiales de Atención</h3>
+                  <p class="text-xs text-slate-500">Se recomienda agendar cita previa</p>
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-xl border border-slate-200">
+                <table class="w-full text-left border-collapse text-sm">
+                  <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white">
+                      <td class="py-3 px-4 font-medium text-[#0F172A]">Lunes a Viernes</td>
+                      <td class="py-3 px-4 text-right font-semibold text-[#0284C7]">10:00 a.m. – 7:00 p.m.</td>
+                    </tr>
+                    <tr class="bg-[#F8FAFC]">
+                      <td class="py-3 px-4 font-medium text-[#0F172A]">Sábado</td>
+                      <td class="py-3 px-4 text-right font-semibold text-[#0284C7]">10:00 a.m. – 3:00 p.m.</td>
+                    </tr>
+                    <tr class="bg-white">
+                      <td class="py-3 px-4 font-medium text-slate-500">Domingo</td>
+                      <td class="py-3 px-4 text-right font-medium text-slate-500">Cerrado</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tarjeta Métodos de Pago y Comodidades Reales -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <h3 class="font-heading font-bold text-base text-[#0F172A] mb-4">
+                Métodos de Pago y Comodidades Verificadas
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                  <svg class="w-5 h-5 text-[#0284C7] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                  <span class="font-medium text-[#0F172A]">Tarjetas de Crédito y Débito</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                  <svg class="w-5 h-5 text-[#0284C7] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                  <span class="font-medium text-[#0F172A]">Pagos Móviles sin contacto (NFC)</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                  <svg class="w-5 h-5 text-[#0284C7] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <span class="font-medium text-[#0F172A]">Pagos en Efectivo</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                  <svg class="w-5 h-5 text-[#0284C7] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="font-medium text-[#0F172A]">Sanitarios Disponibles</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Columna Derecha: Mapa Interactivo de Google Maps -->
+          <div class="lg:col-span-6">
+            <div class="bg-white border border-slate-200 rounded-2xl p-3 shadow-md">
+              <div class="rounded-xl overflow-hidden border border-slate-200 h-[460px] sm:h-[540px] w-full">
+                <iframe
+                  title="Mapa de ubicación exacta de Clínica Dental Queen (Ixtapaluca)"
+                  src="https://maps.google.com/maps?q=19.3116859,-98.9013251&hl=es&z=18&output=embed"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="pt-3 px-2 pb-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600">
+                <span>📍 Coordenadas exactas: 19.3116859, -98.9013251</span>
+                <a
+                  href="https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Queen+(Ixtapaluca)/@19.3116859,-98.9013251,18z/data=!4m6!3m5!1s0x85ce1fc8b31defdd:0xdca9be4c71c07c92!8m2!3d19.3116859!4d-98.9013251!16s%2Fg%2F11v15491c0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-semibold text-[#0284C7] hover:underline"
+                >
+                  Ver ficha completa en Google Maps →
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER LIMPIO (100% Claro, sin Modo Oscuro) -->
+  <footer class="bg-white border-t border-slate-200 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-slate-200">
+        
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm flex items-center justify-center shrink-0">
+            <img src="img/logo-clinica-dental-queen.png" alt="Logo Clínica Dental Queen" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <p class="font-heading font-bold text-base text-[#0F172A]">
+              Clínica Dental Queen (Ixtapaluca)
+            </p>
+            <p class="text-xs text-slate-600 mt-0.5">
+              Av. Cuauhtémoc Manzana 037, Col. Santa Bárbara, CP 56577, Ixtapaluca, Méx.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="#inicio" class="hover:text-[#0284C7] transition-colors">Inicio</a>
+          <a href="#especialidades" class="hover:text-[#0284C7] transition-colors">Especialidades</a>
+          <a href="#galeria" class="hover:text-[#0284C7] transition-colors">Galería</a>
+          <a href="#opiniones" class="hover:text-[#0284C7] transition-colors">Opiniones</a>
+          <a href="#ubicacion" class="hover:text-[#0284C7] transition-colors">Ubicación</a>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 Clínica Dental Queen (Ixtapaluca). Todos los derechos reservados.</p>
+        <p>Teléfono y Citas: <a href="tel:5517168619" class="font-semibold text-[#0284C7] hover:underline">55 1716 8619</a> • Calificación 4.8 ⭐ en Google Maps</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP EN LA ESQUINA INFERIOR DERECHA -->
+  <a
+    href="https://wa.me/525517168619?text=Hola%20Cl%C3%ADnica%20Dental%20Queen%20Ixtapaluca,%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Agendar cita por WhatsApp al 55 1716 8619"
+    class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2.5 bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm px-5 py-3.5 rounded-full shadow-md border border-white transition-all duration-200 hover:-translate-y-1"
+  >
+    <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.122 1.529 5.854l-1.529 5.581 5.716-1.499c1.693.923 3.631 1.448 5.695 1.448 6.627 0 12-5.373 12-12 0-6.627-5.373-12-11.411-11.384z"/>
+    </svg>
+    <span>Agendar Cita</span>
+  </a>
+
+  <!-- Script ligero únicamente para el menú móvil -->
+  <script>
+    (function () {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const iconBars = document.getElementById('menu-icon-bars');
+      const iconClose = document.getElementById('menu-icon-close');
+      const links = document.querySelectorAll('.mobile-link');
+
+      if (btn && menu) {
+        btn.addEventListener('click', function () {
+          const isHidden = menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', !isHidden);
+          iconBars.classList.toggle('hidden', isHidden);
+          iconClose.classList.toggle('hidden', !isHidden);
+          btn.setAttribute('aria-expanded', String(isHidden));
+        });
+
+        links.forEach(function (link) {
+          link.addEventListener('click', function () {
+            menu.classList.add('hidden');
+            iconBars.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
